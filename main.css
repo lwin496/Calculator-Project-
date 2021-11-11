@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.top h1 {
+    text-align: center;
+}
+
+.top hr {
+    width: 20%;
+    margin: auto;
+    border: none;
+    height: 5px;
+    background-color: black;
+}
+
+.calculator-grid {
+    margin-top: -30px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid whitesmoke;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid>button:hover {
+    background-color: grey;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    color: whitesmoke;
+    grid-column: 1/-1;
+    background-color: #141414;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: yellow;
+    font-size: 2.5rem;
+}
